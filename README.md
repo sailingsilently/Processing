@@ -9,5 +9,5 @@
 | :princess: Hide_Seek |                     :: Assignment 05 (week07)(midterm) |
 | :mushroom: ImageArray |                    :: Assignment 06 (week09) |
 | :mushroom: Bacterila |                     :: Assignamet 07 (week10) |
-| :thumbsup: OpenProcessingLinke |           :: Assignamet 08 (week11) |
+| :thumbsup: OpenProcessingLink |           :: Assignamet 08 (week11) |
 | :princess: Hide_Seek_alpha |              :: Assignment 09 (week12)(endterm) |
