@@ -11,12 +11,14 @@
      String GAME_MAP_PATH= DATA_PATH + "savegame/";
      String ANIMATION_FRAM_PATH= DATA_PATH + "anim/";
      String Audio_Path= DATA_PATH + "audio/";
+     String FONT_PATH= DATA_PATH + "font/";
      final int CUBES_SUM= 140;
      Girls Girl;
      Goos Goo00, Goo01;
      Rock PurRock01, PurRock02, PurRock03, PurRock04;
      SceneManager SceneMgr;
      Plot APlot;
+     PFont APHFont;
      int ScreenSizeX;
      int ScreenSizeY;
      int StartPositionX;
@@ -44,6 +46,8 @@
        StartPositionY= ScreenSizeY / 2;
        println(width);
        background(0);
+       APHFont= loadFont(FONT_PATH + "APHont-48.vlw");
+       textFont(APHFont, 32);
        SceneMgr= new SceneManager(ScreenSizeX, ScreenSizeY, LayerSum);
        SceneMgr.init();
      }

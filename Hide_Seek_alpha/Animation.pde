@@ -18,7 +18,24 @@ class Plot{
   final int GRIL_LAYER= 1;
   
   public Plot()
-  {
+  {    
+    //Instructions
+    SceneMgr.addAnimationTask(new AnimationTask(){
+      int Start[]= {0, 0, 0, 1}, End[]= {0, 0, 9, 0};
+      int animate(LinkedList EventQuene)
+      {
+        if(SceneMgr.AnimationSequence.caseTimeEvent(Start, End) == ANIMATION_NOT_START) return ANIMATION_NOT_START;
+        text("To move the girl, KLICK the LEFT Mouse Button when cursor on blocks", 400, 150);
+        text("To move a block, PRESS the RIGHT Mouse Button and Drag when cursor on blocks", 400, 200);
+        return SceneMgr.AnimationSequence.caseTimeEvent(Start, End);
+      }
+      
+      int atLayer()
+      {
+        return CUBE_SPACE_LAYER;
+      }
+    });
+    
     //Cube Space
     SceneMgr.addAnimationTask(new AnimationTask(){
       int Start[]= {}, End[]= {};
