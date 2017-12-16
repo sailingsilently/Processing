@@ -239,7 +239,6 @@ class SceneManager {
               if((mouseButton == LEFT)){
                    if((BOOL_RightMouseSwitch == false) && (BOOL_Expanded == false)){
                      if(BOOL_Expanded == false){
-                       Pt.paint(PaintMode, mouseX, mouseY, 0, 0);
                      }
                    }
                    BOOL_RightMouseSwitch= false;
@@ -328,11 +327,6 @@ class SceneManager {
       {
         SizeX= SceneSizeX;
         SizeY= SceneSizeY;
-        this.Pt= new Painter(ScreenSizeX, ScreenSizeY, LayerSum);
-        Pt.setTextureFolder("");
-        Pt.addTexture("tree.png");
-        Pt.addTexture("sun.png");
-        Pt.addTexture("girl.png");
         this.makeButton();
       }
 };
