@@ -10,4 +10,4 @@
 | [x] :mushroom: ImageArray |                    :: Assignment 06 (week09) |
 | [x] :mushroom: Bacterila |                     :: Assignamet 07 (week10) |
 | [x] :thumbsup: OpenProcessingLinke |           :: Assignamet 08 (week11) |
-| [x] :princess: Hide_Seek_alpha |              :: Assignment 09 (week12)(endterm) |
+| [x] Hide_Seek_alpha |              :: Assignment 09 (week12)(endterm) |
