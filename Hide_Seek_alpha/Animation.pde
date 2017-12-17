@@ -32,7 +32,7 @@ class Plot{
       
       int atLayer()
       {
-        return CUBE_SPACE_LAYER;
+        return CUBE_SPACE_LAYER + 1;
       }
     });
     
