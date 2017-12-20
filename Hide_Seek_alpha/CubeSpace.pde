@@ -500,6 +500,18 @@ void releaseCube()
 {
   SelectedCubeindex= -1;
 }
+  
+public int helper_computeAttachedPoint(int SelfPoint)
+{
+  switch(SelfPoint){
+    case 0:
+    case 1:
+    case 2:
+      return abs(SelfPoint + 3) % 6;
+    default:
+      return abs(SelfPoint - 3) % 6;
+  }
+}
 
 void removeRedundantEdge(int CubeIndex)
   {
@@ -512,7 +524,7 @@ void removeRedundantEdge(int CubeIndex)
       if(Cube.UnitPath.Way[LowerEdge[i]] != UNCONNECTED){
         LowerCube= Cube.UnitPath.Way[LowerEdge[i]];
         if(Cube.LayerIndex < CubesList[LowerCube].LayerIndex){
-          CubesList[LowerCube].UnitPath.Way[UpperEdge[i]]= UNCONNECTED;
+          CubesList[LowerCube].UnitPath.Way[helper_computeAttachedPoint(i)]= UNCONNECTED;
           Cube.UnitPath.Way[LowerEdge[i]]= UNCONNECTED;
         }
       }
@@ -521,7 +533,7 @@ void removeRedundantEdge(int CubeIndex)
       if(Cube.UnitPath.Way[UpperEdge[i]] != UNCONNECTED){
         UpperCube= Cube.UnitPath.Way[UpperEdge[i]];      
         if(Cube.LayerIndex > CubesList[UpperCube].LayerIndex){
-          CubesList[UpperCube].UnitPath.Way[LowerEdge[i]]= UNCONNECTED;
+          CubesList[UpperCube].UnitPath.Way[helper_computeAttachedPoint(i)]= UNCONNECTED;
           Cube.UnitPath.Way[UpperEdge[i]]= UNCONNECTED;
         }
       }

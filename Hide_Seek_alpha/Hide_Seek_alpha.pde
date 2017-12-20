@@ -5,7 +5,7 @@
 *  Copyright (C) 2017,  Chang Liu, All Right Reserved
 **********************************************************/
 //Main
-     boolean DEBUG_MODE= true;
+     boolean DEBUG_MODE= false;
      String DATA_PATH= "data/";
      String IMAGE_PATH= DATA_PATH + "game_map/";
      String GAME_MAP_PATH= DATA_PATH + "savegame/";
@@ -38,7 +38,7 @@
            
      void setup()
      {
-       fullScreen();
+       fullScreen(P3D, 0);
        //size(1920, 1080);
        ScreenSizeX= 1080;
        ScreenSizeY= 813; 

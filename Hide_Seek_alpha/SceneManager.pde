@@ -200,7 +200,6 @@ class SceneManager {
       
       public AnimationSequencer AnimationSequence= new AnimationSequencer();
       
-      public SoundMan Audio= new SoundMan();
       
       public float ScreenStartX= 0;
       public float ScreenStartY= 0;
