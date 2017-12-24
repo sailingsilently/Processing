@@ -21,12 +21,15 @@ class Plot{
   {    
     //Instructions
     SceneMgr.addAnimationTask(new AnimationTask(){
-      int Start[]= {0, 0, 0, 1}, End[]= {0, 0, 9, 0};
+      int Start[]= {0, 0, 0, 1}, End[]= {0, 0, 30, 0};
       int animate(LinkedList EventQuene)
       {
+        float X= 300, Y= 120;
+        float IncY= 50;
         if(SceneMgr.AnimationSequence.caseTimeEvent(Start, End) == ANIMATION_NOT_START) return ANIMATION_NOT_START;
-        text("To move the girl, KLICK the LEFT Mouse Button when cursor on blocks", 400, 150);
-        text("To move a block, PRESS the RIGHT Mouse Button and Drag when cursor on blocks", 400, 200);
+        text("To move the girl, KLICK the LEFT Mouse Button when cursor on blocks", X, Y);
+        text("To move a block, PRESS the RIGHT Mouse Button and Drag when cursor on blocks", X, Y + IncY);
+        text("The target is to walk to the golden cube without being captured by the rocks", X, Y + IncY * 2);
         return SceneMgr.AnimationSequence.caseTimeEvent(Start, End);
       }
       
