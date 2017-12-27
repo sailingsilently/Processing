@@ -72,33 +72,81 @@ class Plot{
       
       int atLayer()
       {
-        return CUBE_SPACE_LAYER;
+        return Girl.getLayer();
       }
     });
     
-   //Goos
     SceneMgr.addAnimationTask(new AnimationTask(){
       int Start[]= {}, End[]= {};
       int animate(LinkedList EventQuene)
       {
-        //if(SceneMgr.AnimationSequence.caseTimeEvent(Start, End) == ANIMATION_NOT_START) return ANIMATION_NOT_START;
-        //int S= SceneMgr.AnimationSequence.caseTimeEvent(Start, End); 
-        //Girl.getInBetween(24);
-
-        //Goo01.walkGoo();
-        //Goo00.walkGoo();
         if(BOOL_Checkmate)return ANIMATION_ALWAYS_RUNNING;
-        if(ChessCounter++ > ChessCounterMax){
-          ChessCounter= 0;
-        }else{
           PurRock01.drawSelf();
-          PurRock03.drawSelf();
-          PurRock02.drawSelf();
-          PurRock04.drawSelf();
-        }
-        PurRock03.walkPawn();
         PurRock01.walkPawn();
+        if(BOOL_GirlCaptured){
+          BOOL_GirlCaptured= false;
+          SceneMgr.init();
+        }
+        return ANIMATION_ALWAYS_RUNNING;
+      }
+      
+      int atLayer()
+      {
+        return PurRock01.getLayer();
+      }
+    });
+    
+    
+    SceneMgr.addAnimationTask(new AnimationTask(){
+      int Start[]= {}, End[]= {};
+      int animate(LinkedList EventQuene)
+      {
+        if(BOOL_Checkmate)return ANIMATION_ALWAYS_RUNNING;
+          PurRock02.drawSelf();
         PurRock02.walkPawn();
+        if(BOOL_GirlCaptured){
+          BOOL_GirlCaptured= false;
+          SceneMgr.init();
+        }
+        return ANIMATION_ALWAYS_RUNNING;
+      }
+      
+      int atLayer()
+      {
+        return PurRock02.getLayer();
+      }
+    });
+    
+    
+    
+    SceneMgr.addAnimationTask(new AnimationTask(){
+      int Start[]= {}, End[]= {};
+      int animate(LinkedList EventQuene)
+      {
+        if(BOOL_Checkmate)return ANIMATION_ALWAYS_RUNNING;
+          PurRock03.drawSelf();
+        PurRock03.walkPawn();
+        if(BOOL_GirlCaptured){
+          BOOL_GirlCaptured= false;
+          SceneMgr.init();
+        }
+        return ANIMATION_ALWAYS_RUNNING;
+      }
+      
+      int atLayer()
+      {
+        return PurRock03.getLayer();
+      }
+    });
+    
+    
+    
+    SceneMgr.addAnimationTask(new AnimationTask(){
+      int Start[]= {}, End[]= {};
+      int animate(LinkedList EventQuene)
+      {
+        if(BOOL_Checkmate)return ANIMATION_ALWAYS_RUNNING;
+          PurRock04.drawSelf();
         PurRock04.walkPawn();
         if(BOOL_GirlCaptured){
           BOOL_GirlCaptured= false;
@@ -109,7 +157,7 @@ class Plot{
       
       int atLayer()
       {
-        return CUBE_SPACE_LAYER;
+        return PurRock04.getLayer();
       }
     });
     

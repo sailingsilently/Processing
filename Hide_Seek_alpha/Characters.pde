@@ -1,4 +1,3 @@
-
 /*********************************************************
 *
 *               Characters v0.01a
@@ -271,6 +270,14 @@ class Characters{
           return true;
         }
     }
+
+
+  int getLayer()
+  {
+    return CubesList[this.getStandingCubeIndex()].getLayerIndex();
+  }
+  
+  
   Characters(String Name, int UID){
     this.Name= Name;
     StepCount= floor(1.0 / StepLength);
